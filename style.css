@@ -44,9 +44,9 @@
     grid-template-columns: 1fr;
  }
  .box{
-    margin: 50px;
-    width: 60%;
-    height: 250px;
+    margin: 20px;
+    width: 90%;
+    height: 300px;
     border: 1px solid black;
 
  }
@@ -59,7 +59,7 @@
     background-color: red;
     img{
         width: 100%;
-        height: 50%;
+        height: 100%;
     }
  }
 }
