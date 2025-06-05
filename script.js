@@ -56,8 +56,8 @@ function searched() {
     });
 }
 
-// searchBox.addEventListener("keydown", searched)
-// searchBtn.addEventListener("click", searched)
+searchBox.addEventListener("keydown", searched)
+searchBtn.addEventListener("click", searched)
 
 
 
