@@ -57,7 +57,7 @@ function searched() {
 }
 
 searchBox.addEventListener("keydown", searched)
-// searchBtn.addEventListener("click", searched)
+searchBtn.addEventListener("click", searched)
 
 
 
