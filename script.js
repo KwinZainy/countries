@@ -65,36 +65,36 @@ function searched() {
 }
 
 
-function region() {
-    container.innerHTML = ""
-    let getRegion = regionBar.value
-    fetch(`https://restcountries.com/v3.1/region/${getRegion}`)
-    .then(response => response.json())
-    .then(data => {
+// function region() {
+//     container.innerHTML = ""
+//     let getRegion = regionBar.value
+//     fetch(`https://restcountries.com/v3.1/region/${getRegion}`)
+//     .then(response => response.json())
+//     .then(data => {
         
-        regionSlot.innerHTML = `<h1>THE ${getRegion.toUpperCase()} COUNTRIES`
+//         regionSlot.innerHTML = `<h1>THE ${getRegion.toUpperCase()} COUNTRIES`
 
-        data.forEach(element =>{
-            let currencyKey = element.currencies ? Object.keys(element.currencies)[0] : null;
-            let currencyName = currencyKey ? element.currencies[currencyKey].name : "N/A";
-            let currencySymbol = currencyKey ? element.currencies[currencyKey].symbol : "N/A";
-            container.innerHTML +=`
-            <div class="box">
-            <div class="image">
-                <img src="${element.flags.png}" alt="not available">
-            </div>
-            <div class="information">
-                <p>Country: ${element.name.common}</p>
-                <p>Population: ${element.population}</p>
-                <p>Currency: ${currencyName}</p>
-                <p>Symbol: ${currencySymbol}</p>
-            </div>
-        </div>`
+//         data.forEach(element =>{
+//             let currencyKey = element.currencies ? Object.keys(element.currencies)[0] : null;
+//             let currencyName = currencyKey ? element.currencies[currencyKey].name : "N/A";
+//             let currencySymbol = currencyKey ? element.currencies[currencyKey].symbol : "N/A";
+//             container.innerHTML +=`
+//             <div class="box">
+//             <div class="image">
+//                 <img src="${element.flags.png}" alt="not available">
+//             </div>
+//             <div class="information">
+//                 <p>Country: ${element.name.common}</p>
+//                 <p>Population: ${element.population}</p>
+//                 <p>Currency: ${currencyName}</p>
+//                 <p>Symbol: ${currencySymbol}</p>
+//             </div>
+//         </div>`
             
             
-        })
-    })
-}
+//         })
+//     })
+// }
 
 searchBox.addEventListener("keydown", searched)
 searchBtn.addEventListener("click", searched)
